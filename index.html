@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Yadav | Portfolio</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(circle at top, #171c2e, #000);
+    color: #eaeaea;
+    min-height: 100vh;
+    padding-top: 64px;
+}
+/* NAV BAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 48px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    z-index: 1000;
+}
+.logo {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #bdbdbd;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+
+    margin-left: auto; /* 👈 key line */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #9e9e9e;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* About Me */
+.aboutme {
+    max-width: 720px;
+    margin: 120px auto 60px;
+    padding: 0;
+
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    border-radius: 0;
+}
+.aboutme h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.aboutme p {
+    color: #bdbdbd;
+    line-height: 1.6;
+    font-size: 15px;
+}
+section h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+/* skills */
+.skills {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.skill-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 14px;
+    padding: 20px 10px;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+.skill-card:hover {
+    transform: translateY(-4px);
+}
+.skill-card img {
+    width: 28px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+}
+.skill-card p {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* education */
+.education {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.04);
+    border-radius: 14px;
+    padding: 20px;
+}
+.edu-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #272c55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.edu-details h3 {
+    font-size: 16px;
+}
+.edu-details p {
+    font-size: 13px;
+    color: #aaa;
+}
+.edu-year {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* cerificate */
+.certificate {
+    max-width: 720px;
+    margin: 0 auto 60px;
+}
+.cert-card {
+    max-width: 360px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    margin-left: 0;
+}
+.certificate h2 {
+    text-align: left;
+}
+.cert-card p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* contact */
+.contact {
+    margin-top: 80px;
+    padding: 30px 0;
+    /* background: radial-gradient(circle at top, #171c2e, #000); */
+    background-color: #000;
+}
+.contact-bar {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 48px;
+}
+.contact-left {
+    font-size: 13px;
+    color: #9e9e9e;
+    display: flex;
+    gap: 10px;
+}
+.contact-left a {
+    color: #9e9e9e;
+    text-decoration: none;
+}
+.contact-left a:hover {
+    color: #ffffff;
+}
+.contact-right {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+.contact-right img {
+    width: 18px;
+    opacity: 0.7;
+    filter: brightness(0) invert(1);
+    transition: 0.25s;
+}
+.contact-right img:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+    </style>
+</head>
+<body>
+
+<!-- Nav bar -->
+<nav class="navbar">
+    <div class="logo">Aman Yadav</div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificate">Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- About -->
+<section class="aboutme" id="about">
+    <h1>Hey, I'm Aman 👋</h1>
+    <p>
+        I'm a Computer Science undergraduate with a strong interest in software development
+        and artificial intelligence. I enjoy building clean, responsive web interfaces and
+        writing efficient, readable code.
+        <br><br>
+        Currently, I'm pursuing my B.Tech in Computer Science (AI/ML), where I'm learning
+        core programming concepts. I like
+        exploring how technology can solve real-world problems and continuously improving
+        my skills through hands-on projects and self-learning.
+        <br><br>
+        I'm always open to learning new tools, collaborating on projects, and growing as a
+        developer.
+    </p>
+</section>
+
+
+<!-- Skills -->
+<section class="skills" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <img src="icons/c.svg" alt="C">
+            <p>C</p>
+        </div>
+        <div class="skill-card">
+            <img src="icons/python.svg" alt="Python">
+            <p>Python</p>
+        </div>
+        <div class="skill-card">
+            <img src="icons/git.svg" alt="Git">
+            <p>Git & GitHub</p>
+        </div>
+        <div class="skill-card">
+            <img src="icons/html5.svg" alt="HTML">
+            <p>HTML5, CSS, Js</p>
+        </div>
+           
+    </div>
+</section>
+
+<section class="education" id="education">
+    <h2>Education</h2>
+
+    <div class="edu-container">
+
+        <div class="edu-item">
+            <div class="edu-logo">
+                <span>RU</span>
+            </div>
+
+            <div class="edu-details">
+                <h3>Rungta International Skills University</h3>
+                <p>B.Tech in Computer Science (AI / ML)</p>
+            </div>
+
+            <div class="edu-year">
+                2025 – 2029
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Certficate -->
+<section class="certificate" id="certificate">
+    <h2>Certificate</h2>
+    <div class="cert-card">
+        <h3>IBM – C Programming</h3>
+        <p>Issued by IBM</p>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-bar">
+
+        <div class="contact-left">
+            <span>© 2025 Aman Yadav</span>
+        </div>
+
+        <ul class="contact-right">
+            <li>
+                <a href="https://www.linkedin.com/in/amanyadav202514/" target="_blank">
+                    <img src="icons/linkedin.svg" alt="LinkedIn">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Aman-Yadav-10160" target="_blank">
+                    <img src="icons/github.svg" alt="GitHub">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:aman.yadav@rungta.org">
+                    <img src="icons/mail.svg" alt="Email">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.chess.com/member/jiraya_for_you" target="_blank"> 
+                    <img src="icons/chess.svg">
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href"))
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        });
+    });
+</script>
+
+</body>
+</html>
